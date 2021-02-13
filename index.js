@@ -5,17 +5,10 @@ const socketio = require('socket.io');
 const http = require('http');
 const path = require('path');
 
-
 var app = express();
 const server = require('http').Server(app);
 const io = socketio(server);
 
-const logger = (req, res, next) => {
-    console.log('hit');
-    next();
-};
-
-app.use(logger);
 app.use(morgan('tiny'));
 app.use(cors());
 app.use(express.static(path.join(__dirname, '/public')));
