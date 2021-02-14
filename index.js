@@ -23,6 +23,8 @@ const io = socketio(server, {
 let hidden = false;
 let model = 0;
 
+const PORT = process.env.PORT || 4000;
+
 // app.use(cors());
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, '/public')));
@@ -69,8 +71,8 @@ io.on('connection', (socket) => {
     });
 });
 
-server.listen(4000, () => {
-    console.log('listening on PORT:4000');
+server.listen(PORT, () => {
+    console.log('listening on PORT:' + PORT);
 });
 
 // if (!module.parent) {
