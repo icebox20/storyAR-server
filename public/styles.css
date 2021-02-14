@@ -2,3 +2,9 @@ body {
   margin: 0px;
   overflow: hidden;
 }
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="center">
+    <h1>storyAR</h1>
+
+        <input type="text" id="lname" name="lname">
+        <button onclick="myFunction()"> Join </button>
+
+</div>
+<script>
+    function myFunction() {
+        document.cookie = "accessCode="+ document.getElementById("lname").value;
+        console.log("Move");
+        window.location = '/artest.html'
+    }
+</script>
+</body>
+
+</html>
