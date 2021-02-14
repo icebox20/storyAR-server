@@ -11,7 +11,8 @@ const https = require('https');
 const randomstring = require('randomstring');
 
 var app = express();
-const server = https.createServer({key: key, cert: cert}, app,);
+// const server = https.createServer({key: key, cert: cert}, app,);
+const server = http.createServer( app);
 const io = socketio(server, {
     cors: {
         origin: "*",
