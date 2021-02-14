@@ -5,8 +5,8 @@ const socketio = require('socket.io');
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
-const key = fs.readFileSync('key.pem');
-const cert = fs.readFileSync('cert.pem');
+// const key = fs.readFileSync('key.pem');
+// const cert = fs.readFileSync('cert.pem');
 const https = require('https');
 const randomstring = require('randomstring');
 
