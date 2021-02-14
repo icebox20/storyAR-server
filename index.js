@@ -61,7 +61,7 @@ io.on('connection', (socket) => {
     socket.on('modelHide', (code,state) => {
         hidden = !hidden;
         console.log("Hide Model requested from: " + code + " [" + state + "]");
-        socket..in(socket.handshake.query.accessCode).emit("modelHide",hidden);
+        socket.in(socket.handshake.query.accessCode).emit("modelHide",hidden);
     });
     // socket.on('createRoom', msg => {
     //     console.log("Created Room");
